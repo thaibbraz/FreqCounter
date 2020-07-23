@@ -1,0 +1,22 @@
+package "freqCounter"
+purpose "Determinar a frequência de ocorrência de determiados elementos em ficheiros"
+version "1.0"
+description "Pedro Moreira, 2161829 e Thainá Barbosa, 2161902"
+
+defmode "mode1" modedesc="compact mode"
+defmode "mode2" modedesc="discrete mode"
+defmode "mode3" modedesc="search mode"
+
+
+
+# Mandatory option
+option "dir" 	    d "Processa todos os ficheiros" 				 string 	 no
+option "file" 		f "Processa os ficheiros indicados na lista" 	 string		 no     
+option "mode" 		m "Contagem orientada ao octeto" 				 int		 no 	default="1"
+ 
+# Optional
+option "compact"	c "Processa os ficheiros" 							 		no
+option "discrete" 	- "Contagem dos valores indicados na lista" 	int 		no 		multiple(1-)
+option "output" 	o "Resultados da aplicação" 					string 		no
+option "search" 	s "Indica as ocorrências do padrão de octetos" 	string 		no
+option "time" 		t "Indica o tempo de execução da aplicação" 	 		    no
